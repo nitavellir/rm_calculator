@@ -1,8 +1,9 @@
 package lib
 
 type Handler struct {
-	Kg       float64
-	Rep      int
-	HardMode bool
-	OneRm    float64
+	Kg         float64
+	Rep        int
+	Correction int
+	OneRm      float64
+	TargetRm   int
 }
