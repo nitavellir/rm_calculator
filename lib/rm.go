@@ -7,7 +7,7 @@ func (h *Handler) CalcOneRm() error {
 }
 
 func (h *Handler) CalcRm() (float64, error) {
-	kg := h.OneRm / (1 + (float64(h.TargetRm) / float64(h.Correction)))
+	kg := h.OneRm / (1 + (float64(h.TargetRm) / float64(40)))
 
 	return kg, nil
 }
