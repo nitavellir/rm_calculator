@@ -8,11 +8,17 @@ import (
 	"rm_calculator/lib"
 )
 
+const (
+	HIGH_REP = "high-rep"
+	LOW_REP  = "low-rep"
+)
+
 var (
 	kg       float64
 	rep      int
 	hard     bool
 	targetRm int
+	menu     string
 )
 
 func main() {
@@ -20,6 +26,7 @@ func main() {
 	flag.IntVar(&rep, "rep", 0, "reps")
 	flag.BoolVar(&hard, "hard", false, "use hard mode")
 	flag.IntVar(&targetRm, "rm", 0, "rm")
+	flag.StringVar(&menu, "menu", "", "create menu(choose 'high-rep' or 'low-rep'")
 	flag.Parse()
 
 	if kg == 0 {
@@ -55,5 +62,11 @@ func main() {
 		} else {
 			log.Println(fmt.Sprintf("WEIGHT FOR %d RM: %.1f", h.TargetRm, kg))
 		}
+	}
+
+	if menu == HIGH_REP {
+
+	} else if menu == LOW_REP {
+
 	}
 }
