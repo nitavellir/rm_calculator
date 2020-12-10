@@ -43,7 +43,11 @@ func main() {
 		log.Fatal("Can not calculate 1 rm.")
 	}
 
-	log.Println(fmt.Sprintf("1 RM: %.1f", h.OneRm))
+	if hard {
+		log.Println(fmt.Sprintf("1 RM(hard): %.1f", h.OneRm))
+	} else {
+		log.Println(fmt.Sprintf("1 RM: %.1f", h.OneRm))
+	}
 
 	if h.TargetRm > 0 {
 		if kg, err := h.CalcRm(); err != nil {
